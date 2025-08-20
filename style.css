@@ -78,7 +78,7 @@ h2::after {
 }
 
 .btn:hover {
-    transform: scale(___);  /* 1.05 추천 */
+    transform: scale(1.15);  /* 1.05 추천 */
 }
 
 /* 태블릿 반응형 (768px ~ 991px) */

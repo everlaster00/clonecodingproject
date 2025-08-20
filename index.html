@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min's 자기소개</title> <!-- 1. 여기에 본인 이름 넣기 -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- 2. 여기에 style.css 파일 연결하기 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 네비게이션 바 -->
+
+
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <!-- 3. 여기에 본인 이름이나 닉네임 넣기 -->
+            <a class="navbar-brand" href="index.html">Min's</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navbar-nav">
+                <div class="navbar-nav ms-auto">
+                    <!-- 4. 메뉴 3개 추가하기 (예: About, Skills, Contact) -->
+                    <a class="nav-link" href="#about">저를 소개합니다</a>
+                    <a class="nav-link" href="#skills">배움의 여정</a>
+                    <a class="nav-link" href="#contact">마음 전하기</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="navbar-spacer"></div>
+
+    <!-- 메인 소개 섹션 -->
+    <section class="hero-section text-center py-5">
+        <div class="container">
+            <!-- 5. 프로필 이미지 src에 본인 사진 URL 넣기 -->
+            <img src="images/profile2.png" alt="프로필 사진" class="profile-img img-fluid rounded-circle mb-4">
+
+            <!-- 6. 본인 이름과 한 줄 소개 넣기 -->
+            <h1 class="display-4">안녕하세요! MIN입니다</h1>
+            <p class="lead">코딩을 공부하고 있는 아재예요</p>
+
+            <!-- 7. Bootstrap 버튼 색상 클래스 선택 (btn-primary, btn-success, btn-info 중 선택) -->
+            <a href="#about" class="btn btn-primary">더 알아보기</a>
+        </div>
+    </section>
+
+    <!-- About 섹션 -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">저를 소개합니다</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <!-- 8. 자기소개 3-4줄 작성 -->
+                    <p>오즈코딩스쿨 부트캡프에서 코딩 수업을 받고 있습니다.</p>
+                    <p>20년전 코딩을 처음 접하고 취미로만 째각째각 해오던 코딩을, </p>
+                    <p>이제라도 제대로 배울 수 있어서 즐거운(?!) 나날을 보내고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills 섹션 -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">배움의 여정</h2>
+            <div class="row">
+                <!-- 9. 본인의 스킬 3개 작성 -->
+                <div class="col-md-4 text-center mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML</h5>
+                            <p class="card-text">기본 태그 사용법부터 문서의 흐름까지 잘 배웠습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CSS</h5>
+                            <p class="card-text">기본 꾸미기부터 우선순위, 포지션 잡기까지 배웠는데, 포지션 잡는 개념이 아직도 어렵습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">부트스트랩</h5>
+                            <p class="card-text">대강 뭐하는 건지 알았는데, 친해지기가 어렵네요; css에 익숙하지 못한채로 같이 쓰니까 더 헷갈리네요;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">깃 허브</h5>
+                            <p class="card-text">사용법은 대강 교육 받았는데, 활용가능하게 익숙해져야 할 것 같습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 10. 나머지 2개 카드도 위와 같이 완성하기 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact 섹션 -->
+    <section id="contact" class="py-5 bg-warning text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">마음 전하기</h2>
+            <!-- 11. 연락처 정보 추가 -->
+            <div class="sendtoemail">
+                <p class="sendemail">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    Email:
+                    <a href="mailto:everlaster00@gmail.com"> everlaster00@gmail.com </a>
+                </p>
+            </div>
+            <div class="sendtotel">
+                <p class="sendetel">
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    Tel:
+                    <a href="tel:01073271296"> 010-7327-1296 </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3 ">
+        <div class="container">
+            <p class="mb-0">© 2025 김정민</p>
+            <div class="mt-2">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+            // 네비게이션바와 스페이서(페이크) div를 선택
+        const navbar = document.getElementById('main-navbar');
+        const spacer = document.getElementById('navbar-spacer');
+
+        // 네비게이션바의 높이를 계산하고 스페이서의 높이를 설정하는 함수
+        function setSpacerHeight() {
+            const navbarHeight = navbar.offsetHeight;
+            spacer.style.height = navbarHeight + 'px';
+        }
+
+        // 처음 페이지가 로드될 때 함수 실행
+        setSpacerHeight();
+
+        // 윈도우 크기가 바뀔 때마다 함수 실행
+        window.addEventListener('resize', setSpacerHeight);
+    </script>
+</body>
+
+</html>

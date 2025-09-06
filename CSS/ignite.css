@@ -1,0 +1,47 @@
+.igniteBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0d1117; /* 어두운 배경 */
+    color: #ffffff; /* 흰색 글자 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3em;
+    margin: 0;
+    overflow: hidden; /* 스크롤바 방지 */
+}
+
+#typing-container {
+    position: relative;
+    text-align: center;
+    /* 글자 색상을 불꽃처럼 보이게 */
+    background: linear-gradient(45deg, #ff8c00, #ffa500, #ff4500); /* 오렌지-레드 계열 그라데이션 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 69, 0, 0.7), 0 0 20px rgba(255, 140, 0, 0.5); /* 불꽃 그림자 */
+}
+
+/* 글자 소멸 애니메이션 */
+.fade-out-burn {
+    animation: burnAway 2s forwards ease-out; /* 2초 동안 사라지는 애니메이션 */
+}
+
+@keyframes burnAway {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateY(-20px) scale(1.05); /* 살짝 위로 올라가며 커짐 */
+        filter: blur(3px); /* 흐려지기 */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1.1); /* 더 위로 올라가며 사라짐 */
+        filter: blur(10px); /* 아주 많이 흐려짐 */
+        display: none; /* 완전히 사라진 후 요소 제거 */
+    }
+}

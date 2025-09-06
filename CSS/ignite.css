@@ -9,6 +9,7 @@
     font-size: 3em;
     margin: 0;
     overflow: hidden; /* 스크롤바 방지 */
+    flex-direction: column; /* 여러 줄을 위해 컬럼으로 */
 }
 
 #typing-container {
@@ -20,6 +21,7 @@
     -webkit-text-fill-color: transparent;
     font-weight: bold;
     text-shadow: 0 0 8px rgba(255, 69, 0, 0.7), 0 0 20px rgba(255, 140, 0, 0.5); /* 불꽃 그림자 */
+    line-height: 1.2; /* 줄 간격 조절 */
 }
 
 /* 글자 소멸 애니메이션 */

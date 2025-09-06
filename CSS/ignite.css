@@ -15,16 +15,35 @@
 #typing-container {
     position: relative;
     text-align: center;
-    /* 글자 색상을 불꽃처럼 보이게 */
+    font-weight: bold;
+    line-height: 1.2; /* 줄 간격 조절 */
+    /* 처음에는 투명하게 시작하여 불꽃 효과를 기다림 */
+    color: transparent; 
+    text-shadow: none;
+    transition: all 0.1s ease-out; /* 글자별 그림자 변화 부드럽게 */
+}
+
+/* 불꽃이 붙은 글자에 대한 스타일 (오빠 아이디어 반영!) */
+.char-spark {
+    display: inline-block; /* text-shadow 적용을 위해 */
     background: linear-gradient(45deg, #ff8c00, #ffa500, #ff4500); /* 오렌지-레드 계열 그라데이션 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    text-shadow: 0 0 8px rgba(255, 69, 0, 0.7), 0 0 20px rgba(255, 140, 0, 0.5); /* 불꽃 그림자 */
-    line-height: 1.2; /* 줄 간격 조절 */
+    /* 여러 겹의 그림자로 불꽃 효과 연출 */
+    text-shadow: 
+        0 0 5px rgba(255, 69, 0, 0.8),    /* 중심 불꽃 */
+        0 0 15px rgba(255, 140, 0, 0.6),   /* 번지는 불꽃 */
+        0 0 30px rgba(255, 215, 0, 0.4);   /* 가장자리 불꽃 */
+    animation: pulseGlow 1.5s infinite alternate; /* 불꽃이 깜빡이는 듯한 효과 */
 }
 
-/* 글자 소멸 애니메이션 */
+@keyframes pulseGlow {
+    0% { text-shadow: 0 0 5px rgba(255, 69, 0, 0.8), 0 0 15px rgba(255, 140, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4); }
+    100% { text-shadow: 0 0 7px rgba(255, 69, 0, 1), 0 0 20px rgba(255, 140, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6); }
+}
+
+
+/* 글자 소멸 애니메이션 (기존 효과 유지) */
 .fade-out-burn {
     animation: burnAway 2s forwards ease-out; /* 2초 동안 사라지는 애니메이션 */
 }
@@ -34,11 +53,14 @@
         opacity: 1;
         transform: translateY(0) scale(1);
         filter: blur(0px);
+        /* 소멸 시작 시 불꽃 효과 제거 */
+        text-shadow: 0 0 5px rgba(255, 69, 0, 0.5), 0 0 10px rgba(255, 140, 0, 0.3);
     }
     50% {
         opacity: 0.7;
         transform: translateY(-20px) scale(1.05); /* 살짝 위로 올라가며 커짐 */
         filter: blur(3px); /* 흐려지기 */
+        text-shadow: none; /* 불꽃 그림자 사라짐 */
     }
     100% {
         opacity: 0;
